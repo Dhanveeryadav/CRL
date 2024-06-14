@@ -1,0 +1,353 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2E323F;
+    --secondary-color: #3B4050;
+    --section-background: #6F737F;
+    --text-color-primary: #FFFFFF;
+    --text-color-secondary: #A59678;
+
+    --font-family-primary: "Oswald", sans-serif;
+    --font-family-secondary: "Montserrat", sans-serif;
+}
+
+body{
+    margin: 0;
+    padding:0;
+    font-size: 16px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color-primary);
+    padding: .95em;
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color-primary);
+    padding: 4.5em;
+}
+
+img {
+    max-width: 100%;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    width: 3em;
+    height: 3em;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    transition: opacity 250ms ease;
+    position: absolute;
+    left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+    opacity: .75;
+}
+
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background-color: var(--text-color-primary);
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: " ";
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+.nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+}
+
+
+.nav-visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+    font-size: 1rem;
+    padding: 2em;
+}
+
+.logo {
+    height: 30px;
+    margin-left: 3.5em;
+    align-self: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+    position: relative;
+}
+
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+}
+
+.nav-item {
+    margin-top: .75em;
+    margin-left: 1.2em;
+    min-height: 10vh;
+}
+
+
+.nav-sign-up,
+.hero-link {
+    background-color: var(--text-color-secondary);
+    padding: .45em .75em;
+    margin-top: 3em;
+    border-radius: 100px;
+}
+
+.hero {
+    width: 100%;
+    padding: 4.7em;
+    background-color: var(--secondary-color);
+    color: var(--text-color-primary);
+}
+
+.hero-txt-wrapper {
+    width: 50%;
+    min-height: 10%;
+}
+
+.hero-txt {
+    font-family: var(--font-family-primary);
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.hero-txt-hightlight {
+    color: var(--text-color-secondary)
+}
+
+
+.hero-description {
+    width: 90%;
+    font-family: var(--font-family-secondary);
+    line-height: 1.5;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+.btn {
+    font-size: 1.5rem;
+    color: var(--text-color-primary);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.section-three {
+    background-color: var(--section-background);
+    padding: 4.5em;
+    font-family: var(--font-family-secondary);
+}
+
+.section-three-heading {
+    color: var(--text-color-secondary);
+    font-size: 1.875rem;
+}
+
+.section-three-subtitle {
+    font-size: 1.25rem;
+    opacity: .80;
+}
+
+.section-four {
+    padding: 5em;
+}
+
+.responsive-img {
+    width: 400px;
+}
+
+.section-four-main-heading {
+    font-family: var(--font-family-primary);
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: var(--text-color-secondary)
+}
+
+.section-four-main-description {
+    font-family: var(--font-family-secondary);
+    font-size: 1.325rem;
+    font-weight: 400;
+}
+
+.section-four-heading {
+    font-size: 1.875rem;
+    font-family: var(--font-family-primary);
+    font-weight: 900;
+}
+
+.section-four-description {
+    font-size: 1.125rem;
+    font-family: var(--font-family-secondary);
+    font-weight: 400;
+
+}
+
+.section-four-container {
+    background-color: var(--secondary-color);
+    padding: 1.5em;
+    margin-top: 2em;
+    text-align: center;
+    color: var(--text-color-primary);
+}
+
+.footer-heading {
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: var(--font-family-primary);
+    text-align: center;
+}
+
+.footer-about {
+    color: var(--text-color-secondary);
+    font-size: 1.3125rem;
+    font-weight: 400;
+    font-family: var(--font-family-primary);
+}
+
+.footer-description {
+    font-family: var(--font-family-secondary);
+    font-size: 1rem;
+}
+
+.footer-links {
+    align-self: flex-start;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--text-color-primary);
+    display: block;
+    margin-bottom: .625em;
+}
+
+
+.footer-link-container  {
+    align-self: flex-start;
+}
+
+@media (min-width: 750px) {
+    header {
+        padding: 1.5em;
+    }
+
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1.5em;
+    } 
+
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .col {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-item + .nav-item {
+        margin-left: 1.5em;
+    }
+    
+    .hero-description-container {
+        margin-left: 5em;
+    }
+
+    .section-three {
+        text-align: center;
+    }
+    
+    .section-three-content {
+        padding: 1.45em;
+    }
+
+    .section-four-container {
+        margin-left: auto;
+        width: 80%
+    }
+
+    .section-four-container + .section-four-container {
+        margin-left: 1.5em;
+    }
+
+    .responsive-img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .footer-link-container {
+        margin-left: 4em;
+        padding: 2em;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .row-lg {
+    display: flex;
+}
+    .col-lg {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .responsive-img {
+        width: 500px;
+    }
+
+    .section-four-container + .section-four-container {
+        margin-left: auto
+    }
+
+   
+}
